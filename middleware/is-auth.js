@@ -12,7 +12,7 @@ module.exports = (req, res, next) => {
     //console.log(token);
     let decodedToken;
     try {
-        decodedToken = jwt.verify(token, process.env.tokenPrivateKey);
+        decodedToken = jwt.verify(token, process.env.tokenPrivateKeyAuth);
         //console.log(decodedToken);
     } catch (err) {
         err.statusCode = 500;
